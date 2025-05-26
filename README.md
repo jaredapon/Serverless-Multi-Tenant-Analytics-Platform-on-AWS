@@ -1,5 +1,4 @@
 # Serverless-Multi-Tenant-Analytics-Platform-on-AWS
-# INTEGREAT ANALYTICS AS A SERVICE
 
 A multi-tenant serverless analytics platform built using AWS CDK (Python),
 with isolated Lambda functions per application (Campus, Teleo, Pillars, EventGarde),
