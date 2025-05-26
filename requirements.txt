@@ -1,0 +1,7 @@
+aws-cdk-lib==2.194.0
+constructs>=10.0.0,<11.0.0
+aws-cdk.aws-lambda-python-alpha==2.194.0a0
+dotenv==0.9.9
+boto3==1.38.16
+SQLAlchemy==2.0.41
+psycopg2-binary==2.9.10

@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: InteGreat Analytics Tenant Lambdas for Local Testing
+
+Globals:
+  Function:
+    Runtime: python3.9
+    Timeout: 900
+    MemorySize: 2048
+    Environment:
+      Variables:
+        DATABASE_URL: "postgresql://integreatdb_owner:npg_0vejVGp9AFLh@ep-shy-paper-a1v7lhc9-pooler.ap-southeast-1.aws.neon.tech/integreatdb?sslmode=require"
+
+Resources:
+  CampusAnalyticsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: scripts/campus/handler.handler
+      CodeUri: .
+      Description: Campus analytics export Lambda
+
+  TeleoAnalyticsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: scripts/teleo/handler.handler
+      CodeUri: .
+      Description: Teleo analytics export Lambda
+
+  PillarsAnalyticsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: scripts/pillars/handler.handler
+      CodeUri: .
+      Description: Pillars analytics export Lambda
+
+  EvntgardeAnalyticsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: scripts/evntgarde/handler.handler
+      CodeUri: .
+      Description: Evntgarde analytics export Lambda
